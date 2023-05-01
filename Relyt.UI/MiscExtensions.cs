@@ -9,7 +9,7 @@ public static class MiscExtensions
 	public static Vector2 GetMousePositionRelativeTo(this MouseEventArgs e, Widget widget)
 	{
 		Point mouseLocation = e.Location;
-		RectangleF widgetRect = widget.Rect;
+		RectangleF widgetRect = widget.DrawRect;
 		return new Vector2(mouseLocation.X - widgetRect.X, mouseLocation.Y - widgetRect.Y);
 	}
 }

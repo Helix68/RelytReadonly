@@ -11,11 +11,13 @@ public class Widget
 	/// <summary>
 	/// The rect that this widget was last drawn in.
 	/// </summary>
-	public RectangleF Rect { get; private set; }
+	public RectangleF DrawRect { get; private set; }
+
+	public Point MouseLocation { get; set; }
 
 	public void DrawWidget(DrawingContext context, RectangleF rect)
 	{
-		Rect = rect;
+		DrawRect = rect;
 		OnDraw(context, rect);
 	}
 
