@@ -36,6 +36,7 @@ public class Window
 		_form.KeyPress += OnFormKeyPress;
 		_form.MouseDown += OnFormMouseDown;
 		_form.MouseUp += OnFormMouseUp;
+		_form.MouseMove += OnFormMouseMove;
 	}
 
 	/// <summary>
@@ -119,6 +120,11 @@ public class Window
 	private void OnFormMouseUp(object? sender, MouseEventArgs e)
 	{
 		_content?.OnMouseUp(e);
+	}
+
+	private void OnFormMouseMove(object? sender, MouseEventArgs e)
+	{
+		_content?.OnMouseMove(e);
 	}
 }
 

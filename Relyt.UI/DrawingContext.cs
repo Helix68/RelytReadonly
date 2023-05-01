@@ -48,10 +48,10 @@ public class DrawingContext
 		_solidColorBrush = new D2D1.SolidColorBrush(_renderTarget, new RawColor4(0.0f, 0.0f, 0.0f, 1.0f));
 	}
 
-	public static DWrite.TextLayout CreateTextLayout(string text)
+	public static DWrite.TextLayout CreateTextLayout(string text, SizeF size)
 	{
 		DWrite.TextFormat textFormat = new DWrite.TextFormat(FactoryDWrite, "Cascadia Mono", DWrite.FontWeight.SemiLight, DWrite.FontStyle.Normal, 40.0f);
-		return new DWrite.TextLayout(FactoryDWrite, text, textFormat, float.PositiveInfinity, float.PositiveInfinity);
+		return new DWrite.TextLayout(FactoryDWrite, text, textFormat, size.Width, size.Height);
 	}
 
 	internal void BeginDraw()

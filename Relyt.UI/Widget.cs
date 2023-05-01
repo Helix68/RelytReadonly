@@ -25,4 +25,5 @@ public class Widget
 	public virtual bool OnCharDown(char c) => false;
 	public virtual bool OnMouseDown(MouseEventArgs e) => false;
 	public virtual bool OnMouseUp(MouseEventArgs e) => false;
+	public virtual bool OnMouseMove(MouseEventArgs e) => false;
 }
